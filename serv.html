@@ -1,0 +1,196 @@
+5<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MusicClubServices</title>
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #151935;
+      --text: #eef2ff;
+      --muted: #c7cbe6;
+      --accent: #8b5cf6;
+      --accent-2: #22d3ee;
+      --ring: #a78bfa66;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 2;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, #1e1b4b 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 110% 10%, #0e7490 0%, transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 64px 20px 32px;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #ffffff0f;
+      border: 1px solid #ffffff22;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(28px, 3.6vw, 42px);
+      line-height: 1.15;
+    }
+    .sub {
+      margin: 0 auto;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      padding: 24px 20px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      grid-column: span 12;
+      background: linear-gradient(180deg, #1b1f44, #121532);
+      border: 1px solid #ffffff14;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 30px #00000040;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px #00000055;
+      border-color: var(--ring);
+    }
+    .card h3 {
+      margin: 10px 0 8px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 6px 20px #0000004a;
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+    .card p { color: var(--muted); margin: 0 0 10px; }
+    .card ul {
+      margin: 0; padding-left: 20px;
+      color: #e9eaff;
+    }
+    .cta {
+      margin: 18px 0 0;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1022;
+      border: 0;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 26px #00000040;
+    }
+    .cta:hover { filter: brightness(1.05); }
+
+    /* Responsive columns */
+    @media (min-width: 700px) {
+      .card { grid-column: span 6; }
+    }
+    @media (min-width: 1000px) {
+      .card { grid-column: span 3; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 60px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="eyebrow" aria-label="Section title">Music Club Services</span>
+    <h1>Learn, Perform, Compete, and Create</h1>
+    <p class="sub">Our music club supports members at every stage—offering guided lessons, real stages to perform, pathways to competitions, and hands-on help with recording and production.</p>
+  </header>
+
+  <main class="grid" aria-label="Services grid">
+    <!-- Music Lessons -->
+    <section class="card" aria-labelledby="lessons-title">
+      <h3 id="lessons-title"><span class="badge" aria-hidden="true">🎸</span> Music Lessons</h3>
+      <p>Grow your skills with friendly, structured coaching—perfect for beginners to advanced members.</p>
+      <ul>
+        <li>Vocal coaching & ear training</li>
+        <li>Instrument classes (guitar, piano, drums, etc.)</li>
+        <li>Songwriting and music theory workshops</li>
+        <li>Peer mentoring and practice groups</li>
+      </ul>
+      <a class="cta" href="#join">Join lessons</a>
+    </section>
+
+    <!-- Events & Performances -->
+    <section class="card" aria-labelledby="events-title">
+      <h3 id="events-title"><span class="badge" aria-hidden="true">🎤</span> Events & Performances</h3>
+      <p>Take the stage and share your sound at our community events.</p>
+      <ul>
+        <li>Open mics, mini-concerts, and showcases</li>
+        <li>Busking and outreach performances</li>
+        <li>Event planning and stagecraft training</li>
+        <li>Collab nights for bands and duos</li>
+      </ul>
+      <a class="cta" href="#schedule">See events</a>
+    </section>
+
+    <!-- Competitions -->
+    <section class="card" aria-labelledby="comp-title">
+      <h3 id="comp-title"><span class="badge" aria-hidden="true">🏆</span> Competitions</h3>
+      <p>Level up with friendly contests and official tournaments.</p>
+      <ul>
+        <li>Audition prep and repertoire coaching</li>
+        <li>Local & national contest participation</li>
+        <li>Feedback from judges and alumni</li>
+        <li>Awards, certificates, and recognition</li>
+      </ul>
+      <a class="cta" href="#compete">Get competition-ready</a>
+    </section>
+
+    <!-- Recording & Production Support -->
+    <section class="card" aria-labelledby="prod-title">
+      <h3 id="prod-title"><span class="badge" aria-hidden="true">🎧</span> Recording & Production</h3>
+      <p>Turn ideas into tracks with hands-on studio guidance.</p>
+      <ul>
+        <li>Home studio setup tips and checklists</li>
+        <li>Intro to DAWs (Audacity, BandLab, etc.)</li>
+        <li>Recording vocals & instruments</li>
+        <li>Basic mixing, mastering, and release prep</li>
+      </ul>
+      <a class="cta" href="#studio">Book studio time</a>
+    </section>
+  </main>
+
+  <footer>
+    <p id="join">Questions or want to sign up? Email <a href="https://youtu.be/u9bYN7DXsJw?si=cad2VLmGOMfPEnB8" style="color:#a5b4fc;">musicclub@example.com</a> or visit the club office.</p>
+  </footer>
+</body>
+</html>

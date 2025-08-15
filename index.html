@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT FORM</title>
+<style>
+    body {
+        background: url("music.jpg") no-repeat center center fixed; 
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        color: gold;
+        text-transform: uppercase;
+    }
+    .form-container {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        width: 400px;
+        margin: 50px auto;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 215, 0, 0.5); 
+        box-shadow: 0 0 20px gold; 
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="email"], input[type="password"] {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background: khaki;
+        color: black;
+        font-weight: bold;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 0 10px gold; 
+        text-align: center;
+        min-width: 100px;
+        border: none;
+        cursor: pointer;
+    }
+    .btn-link:hover {
+        background: darkgoldenrod;
+        box-shadow: 0 0 15px darkgoldenrod;
+    }
+</style>
+</head>
+<body>
+    <br><br><br><br><br>
+<div class="form-container">
+    <h2 style="text-align:center;">LOG IN</h2>
+
+    <form action="home.html" method="get">
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="pswd">PASSWORD:</label>
+        <input type="password" id="pswd" name="pswd" minlength="8" required>
+
+        <div class="buttons">
+            <button type="submit" class="btn-link">SUBMIT</button>
+            <a href="regus.html" class="btn-link">SIGN IN</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
